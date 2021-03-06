@@ -1,0 +1,27 @@
+---
+info:
+  apiname: kafkaconsumer
+  status: ok
+  version: v1_0_0
+management:
+  endpoints:
+    web:
+      base-path: /api/v1/walgreens/java/consumer
+      exposure:
+        include: health,info
+      path-mapping:
+        info: ping
+spring:
+  data:
+    mongodb:
+      database: eapi_data
+kafka:
+  topic: dev-customer
+  consumer:
+    group: customer_group
+
+server:
+  port: 8083
+
+
+

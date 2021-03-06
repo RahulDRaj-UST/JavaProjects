@@ -1,0 +1,4 @@
+com\wba\api\processcustomer\ProcessCustomerApplicationTest.class
+com\wba\api\processcustomer\service\CustomerServiceTest.class
+com\wba\api\processcustomer\RunCucumberTest.class
+com\wba\api\processcustomer\common\KafkaConsumerTest.class

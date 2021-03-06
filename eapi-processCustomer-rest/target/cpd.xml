@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="81" tokens="231">
+      <file line="28"
+            path="D:\myWork\Java\eapi-processCustomer-rest\src\main\java\com\wba\api\processcustomer\dto\PatientDto.java"/>
+      <file line="51"
+            path="D:\myWork\Java\eapi-processCustomer-rest\src\main\java\com\wba\api\processcustomer\model\PatientModel.java"/>
+      <codefragment><![CDATA[    public String getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getMiddleInit() {
+        return middleInit;
+    }
+
+    public void setMiddleInit(String middleInit) {
+        this.middleInit = middleInit;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getSurnameSuffix() {
+        return surnameSuffix;
+    }
+
+    public void setSurnameSuffix(String surnameSuffix) {
+        this.surnameSuffix = surnameSuffix;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getPhoneNumberAreaCode() {
+        return phoneNumberAreaCode;
+    }
+
+    public void setPhoneNumberAreaCode(String phoneNumberAreaCode) {
+        this.phoneNumberAreaCode = phoneNumberAreaCode;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPreferredStoreNumber() {]]></codefragment>
+   </duplication>
+   <duplication lines="41" tokens="116">
+      <file line="19"
+            path="D:\myWork\Java\eapi-processCustomer-rest\src\main\java\com\wba\api\processcustomer\dto\PaymentDto.java"/>
+      <file line="195"
+            path="D:\myWork\Java\eapi-processCustomer-rest\src\main\java\com\wba\api\processcustomer\model\PatientModel.java"/>
+      <codefragment><![CDATA[    public String getCardType() {
+        return cardType;
+    }
+
+    public void setCardType(String cardType) {
+        this.cardType = cardType;
+    }
+
+    public String getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(String creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public Integer getLastFourDigits() {
+        return lastFourDigits;
+    }
+
+    public void setLastFourDigits(Integer lastFourDigits) {
+        this.lastFourDigits = lastFourDigits;
+    }
+
+    public Long getExpiryMonth() {
+        return expiryMonth;
+    }
+
+    public void setExpiryMonth(Long expiryMonth) {
+        this.expiryMonth = expiryMonth;
+    }
+
+    public Long getExpiryYear() {
+        return expiryYear;
+    }
+
+    public void setExpiryYear(Long expiryYear) {
+        this.expiryYear = expiryYear;
+    }
+
+    public String getZipCode() {]]></codefragment>
+   </duplication>
+</pmd-cpd>

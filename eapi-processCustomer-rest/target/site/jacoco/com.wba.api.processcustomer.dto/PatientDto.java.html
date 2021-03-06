@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PatientDto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">processcustomer</a> &gt; <a href="index.source.html" class="el_package">com.wba.api.processcustomer.dto</a> &gt; <span class="el_source">PatientDto.java</span></div><h1>PatientDto.java</h1><pre class="source lang-java linenums">package com.wba.api.processcustomer.dto;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+<span class="fc" id="L9">public class PatientDto implements Serializable {</span>
+
+    private String patientId;
+    private String firstName;
+    private String middleInit;
+    private String lastName;
+    private String surnameSuffix;
+    private String gender;
+    private String email;
+    private String dob;
+    private String phoneNumberAreaCode;
+    private String phoneNumber;
+    private String preferredStoreNumber;
+    private String lastFilledStoreNumber;
+    private String preferredPaymentMethod;
+    private String previousFilledLastMile;
+    private ShippingAddressDto customerShippingAddress;
+    private List&lt;PaymentDto&gt; profilePaymentDetails;
+
+    public String getPatientId() {
+<span class="fc" id="L29">        return patientId;</span>
+    }
+
+    public void setPatientId(String patientId) {
+<span class="fc" id="L33">        this.patientId = patientId;</span>
+<span class="fc" id="L34">    }</span>
+
+    public String getFirstName() {
+<span class="fc" id="L37">        return firstName;</span>
+    }
+
+    public void setFirstName(String firstName) {
+<span class="fc" id="L41">        this.firstName = firstName;</span>
+<span class="fc" id="L42">    }</span>
+
+    public String getMiddleInit() {
+<span class="fc" id="L45">        return middleInit;</span>
+    }
+
+    public void setMiddleInit(String middleInit) {
+<span class="fc" id="L49">        this.middleInit = middleInit;</span>
+<span class="fc" id="L50">    }</span>
+
+    public String getLastName() {
+<span class="fc" id="L53">        return lastName;</span>
+    }
+
+    public void setLastName(String lastName) {
+<span class="fc" id="L57">        this.lastName = lastName;</span>
+<span class="fc" id="L58">    }</span>
+
+    public String getSurnameSuffix() {
+<span class="fc" id="L61">        return surnameSuffix;</span>
+    }
+
+    public void setSurnameSuffix(String surnameSuffix) {
+<span class="fc" id="L65">        this.surnameSuffix = surnameSuffix;</span>
+<span class="fc" id="L66">    }</span>
+
+    public String getGender() {
+<span class="fc" id="L69">        return gender;</span>
+    }
+
+    public void setGender(String gender) {
+<span class="fc" id="L73">        this.gender = gender;</span>
+<span class="fc" id="L74">    }</span>
+
+    public String getEmail() {
+<span class="fc" id="L77">        return email;</span>
+    }
+
+    public void setEmail(String email) {
+<span class="fc" id="L81">        this.email = email;</span>
+<span class="fc" id="L82">    }</span>
+
+    public String getDob() {
+<span class="fc" id="L85">        return dob;</span>
+    }
+
+    public void setDob(String dob) {
+<span class="fc" id="L89">        this.dob = dob;</span>
+<span class="fc" id="L90">    }</span>
+
+    public String getPhoneNumberAreaCode() {
+<span class="fc" id="L93">        return phoneNumberAreaCode;</span>
+    }
+
+    public void setPhoneNumberAreaCode(String phoneNumberAreaCode) {
+<span class="fc" id="L97">        this.phoneNumberAreaCode = phoneNumberAreaCode;</span>
+<span class="fc" id="L98">    }</span>
+
+    public String getPhoneNumber() {
+<span class="fc" id="L101">        return phoneNumber;</span>
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+<span class="fc" id="L105">        this.phoneNumber = phoneNumber;</span>
+<span class="fc" id="L106">    }</span>
+
+    public String getPreferredStoreNumber() {
+<span class="fc" id="L109">        return preferredStoreNumber;</span>
+    }
+
+    public void setPreferredStoreNumber(String preferredStoreNumber) {
+<span class="fc" id="L113">        this.preferredStoreNumber = preferredStoreNumber;</span>
+<span class="fc" id="L114">    }</span>
+
+    public String getLastFilledStoreNumber() {
+<span class="fc" id="L117">        return lastFilledStoreNumber;</span>
+    }
+
+    public void setLastFilledStoreNumber(String lastFilledStoreNumber) {
+<span class="fc" id="L121">        this.lastFilledStoreNumber = lastFilledStoreNumber;</span>
+<span class="fc" id="L122">    }</span>
+
+    public String getPreferredPaymentMethod() {
+<span class="fc" id="L125">        return preferredPaymentMethod;</span>
+    }
+
+    public void setPreferredPaymentMethod(String preferredPaymentMethod) {
+<span class="fc" id="L129">        this.preferredPaymentMethod = preferredPaymentMethod;</span>
+<span class="fc" id="L130">    }</span>
+
+    public String getPreviousFilledLastMile() {
+<span class="fc" id="L133">        return previousFilledLastMile;</span>
+    }
+
+    public void setPreviousFilledLastMile(String previousFilledLastMile) {
+<span class="fc" id="L137">        this.previousFilledLastMile = previousFilledLastMile;</span>
+<span class="fc" id="L138">    }</span>
+
+    public ShippingAddressDto getCustomerShippingAddress() {
+<span class="fc" id="L141">        return customerShippingAddress;</span>
+    }
+
+    public void setCustomerShippingAddress(ShippingAddressDto customerShippingAddress) {
+<span class="fc" id="L145">        this.customerShippingAddress = customerShippingAddress;</span>
+<span class="fc" id="L146">    }</span>
+
+    public List&lt;PaymentDto&gt; getProfilePaymentDetails() {
+
+<span class="pc bpc" id="L150" title="1 of 2 branches missed.">        if (profilePaymentDetails == null)</span>
+<span class="nc" id="L151">            profilePaymentDetails = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L153">        return profilePaymentDetails;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

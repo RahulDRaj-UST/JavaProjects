@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+processcustomer,com.wba.api.processcustomer.config,PropertyConfig,0,9,0,0,0,3,0,2,0,2
+processcustomer,com.wba.api.processcustomer.config,KafkaConfiguration,0,63,0,0,0,14,0,4,0,4
+processcustomer,com.wba.api.processcustomer.service,CustomerServiceImpl,5,47,0,2,2,12,0,4,0,3
+processcustomer,com.wba.api.processcustomer.model,PatientModel,0,178,0,0,0,76,0,51,0,51
+processcustomer,com.wba.api.processcustomer.dto,PatientDto,5,114,1,1,1,48,1,32,0,32
+processcustomer,com.wba.api.processcustomer.dto,ShippingAddressDto,4,27,0,0,2,11,1,8,1,8
+processcustomer,com.wba.api.processcustomer.dto,PaymentDto,4,48,0,0,2,20,1,14,1,14
+processcustomer,com.wba.api.processcustomer.common,KafkaConsumer,0,66,2,2,0,18,2,3,0,3
+processcustomer,com.wba.api.processcustomer,ProcessCustomerApplication,5,3,0,0,2,1,1,1,1,1

@@ -1,0 +1,4 @@
+com\wba\api\updatecustomer\controller\CustomerControllerTest.class
+com\wba\api\updatecustomer\UpdateCustomerApplicationTests.class
+com\wba\api\updatecustomer\RunCucumberTest.class
+com\wba\api\updatecustomer\service\CustomerTopicServiceImplTest.class

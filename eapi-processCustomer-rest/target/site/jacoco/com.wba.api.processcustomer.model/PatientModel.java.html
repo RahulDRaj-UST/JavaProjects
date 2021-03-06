@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PatientModel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">processcustomer</a> &gt; <a href="index.source.html" class="el_package">com.wba.api.processcustomer.model</a> &gt; <span class="el_source">PatientModel.java</span></div><h1>PatientModel.java</h1><pre class="source lang-java linenums">package com.wba.api.processcustomer.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+
+@Document(collection = &quot;tbf0_patient&quot;)
+<span class="fc" id="L11">public class PatientModel {</span>
+
+    @Id
+    @JsonIgnore
+    private String id;
+
+    private String patientId;
+    private String firstName;
+    private String middleInit;
+    private String lastName;
+    private String surnameSuffix;
+    private String gender;
+    private String email;
+    private String dob;
+    private String phoneNumberAreaCode;
+    private String phoneNumber;
+    private int    preferredStoreNumber;
+    private String lastFilledStoreNumber;
+    private String preferredPaymentMethod;
+    private String previousFilledLastMile;
+    private String addressLine1;
+    private String city;
+    private String zipCode;
+    private String state;
+    private String cardType;
+    private String creditCard;
+    private Integer lastFourDigits;
+    private Long    expiryMonth;
+    private Long    expiryYear;
+    @JsonProperty(&quot;isDefault&quot;)
+    private Boolean isDefault;
+
+    public String getId() {
+<span class="fc" id="L44">        return id;</span>
+    }
+
+    public void setId(String id) {
+<span class="fc" id="L48">        this.id = id;</span>
+<span class="fc" id="L49">    }</span>
+
+    public String getPatientId() {
+<span class="fc" id="L52">        return patientId;</span>
+    }
+
+    public void setPatientId(String patientId) {
+<span class="fc" id="L56">        this.patientId = patientId;</span>
+<span class="fc" id="L57">    }</span>
+
+    public String getFirstName() {
+<span class="fc" id="L60">        return firstName;</span>
+    }
+
+    public void setFirstName(String firstName) {
+<span class="fc" id="L64">        this.firstName = firstName;</span>
+<span class="fc" id="L65">    }</span>
+
+    public String getMiddleInit() {
+<span class="fc" id="L68">        return middleInit;</span>
+    }
+
+    public void setMiddleInit(String middleInit) {
+<span class="fc" id="L72">        this.middleInit = middleInit;</span>
+<span class="fc" id="L73">    }</span>
+
+    public String getLastName() {
+<span class="fc" id="L76">        return lastName;</span>
+    }
+
+    public void setLastName(String lastName) {
+<span class="fc" id="L80">        this.lastName = lastName;</span>
+<span class="fc" id="L81">    }</span>
+
+    public String getSurnameSuffix() {
+<span class="fc" id="L84">        return surnameSuffix;</span>
+    }
+
+    public void setSurnameSuffix(String surnameSuffix) {
+<span class="fc" id="L88">        this.surnameSuffix = surnameSuffix;</span>
+<span class="fc" id="L89">    }</span>
+
+    public String getGender() {
+<span class="fc" id="L92">        return gender;</span>
+    }
+
+    public void setGender(String gender) {
+<span class="fc" id="L96">        this.gender = gender;</span>
+<span class="fc" id="L97">    }</span>
+
+    public String getEmail() {
+<span class="fc" id="L100">        return email;</span>
+    }
+
+    public void setEmail(String email) {
+<span class="fc" id="L104">        this.email = email;</span>
+<span class="fc" id="L105">    }</span>
+
+    public String getDob() {
+<span class="fc" id="L108">        return dob;</span>
+    }
+
+    public void setDob(String dob) {
+<span class="fc" id="L112">        this.dob = dob;</span>
+<span class="fc" id="L113">    }</span>
+
+    public String getPhoneNumberAreaCode() {
+<span class="fc" id="L116">        return phoneNumberAreaCode;</span>
+    }
+
+    public void setPhoneNumberAreaCode(String phoneNumberAreaCode) {
+<span class="fc" id="L120">        this.phoneNumberAreaCode = phoneNumberAreaCode;</span>
+<span class="fc" id="L121">    }</span>
+
+    public String getPhoneNumber() {
+<span class="fc" id="L124">        return phoneNumber;</span>
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+<span class="fc" id="L128">        this.phoneNumber = phoneNumber;</span>
+<span class="fc" id="L129">    }</span>
+
+    public int getPreferredStoreNumber() {
+<span class="fc" id="L132">        return preferredStoreNumber;</span>
+    }
+
+    public void setPreferredStoreNumber(int preferredStoreNumber) {
+<span class="fc" id="L136">        this.preferredStoreNumber = preferredStoreNumber;</span>
+<span class="fc" id="L137">    }</span>
+
+    public String getLastFilledStoreNumber() {
+<span class="fc" id="L140">        return lastFilledStoreNumber;</span>
+    }
+
+    public void setLastFilledStoreNumber(String lastFilledStoreNumber) {
+<span class="fc" id="L144">        this.lastFilledStoreNumber = lastFilledStoreNumber;</span>
+<span class="fc" id="L145">    }</span>
+
+    public String getPreferredPaymentMethod() {
+<span class="fc" id="L148">        return preferredPaymentMethod;</span>
+    }
+
+    public void setPreferredPaymentMethod(String preferredPaymentMethod) {
+<span class="fc" id="L152">        this.preferredPaymentMethod = preferredPaymentMethod;</span>
+<span class="fc" id="L153">    }</span>
+
+    public String getPreviousFilledLastMile() {
+<span class="fc" id="L156">        return previousFilledLastMile;</span>
+    }
+
+    public void setPreviousFilledLastMile(String previousFilledLastMile) {
+<span class="fc" id="L160">        this.previousFilledLastMile = previousFilledLastMile;</span>
+<span class="fc" id="L161">    }</span>
+
+    public String getAddressLine1() {
+<span class="fc" id="L164">        return addressLine1;</span>
+    }
+
+    public void setAddressLine1(String addressLine1) {
+<span class="fc" id="L168">        this.addressLine1 = addressLine1;</span>
+<span class="fc" id="L169">    }</span>
+
+    public String getCity() {
+<span class="fc" id="L172">        return city;</span>
+    }
+
+    public void setCity(String city) {
+<span class="fc" id="L176">        this.city = city;</span>
+<span class="fc" id="L177">    }</span>
+
+    public String getZipCode() {
+<span class="fc" id="L180">        return zipCode;</span>
+    }
+
+    public void setZipCode(String zipCode) {
+<span class="fc" id="L184">        this.zipCode = zipCode;</span>
+<span class="fc" id="L185">    }</span>
+
+    public String getState() {
+<span class="fc" id="L188">        return state;</span>
+    }
+
+    public void setState(String state) {
+<span class="fc" id="L192">        this.state = state;</span>
+<span class="fc" id="L193">    }</span>
+
+    public String getCardType() {
+<span class="fc" id="L196">        return cardType;</span>
+    }
+
+    public void setCardType(String cardType) {
+<span class="fc" id="L200">        this.cardType = cardType;</span>
+<span class="fc" id="L201">    }</span>
+
+    public String getCreditCard() {
+<span class="fc" id="L204">        return creditCard;</span>
+    }
+
+    public void setCreditCard(String creditCard) {
+<span class="fc" id="L208">        this.creditCard = creditCard;</span>
+<span class="fc" id="L209">    }</span>
+
+    public Integer getLastFourDigits() {
+<span class="fc" id="L212">        return lastFourDigits;</span>
+    }
+
+    public void setLastFourDigits(Integer lastFourDigits) {
+<span class="fc" id="L216">        this.lastFourDigits = lastFourDigits;</span>
+<span class="fc" id="L217">    }</span>
+
+    public Long getExpiryMonth() {
+<span class="fc" id="L220">        return expiryMonth;</span>
+    }
+
+    public void setExpiryMonth(Long expiryMonth) {
+<span class="fc" id="L224">        this.expiryMonth = expiryMonth;</span>
+<span class="fc" id="L225">    }</span>
+
+    public Long getExpiryYear() {
+<span class="fc" id="L228">        return expiryYear;</span>
+    }
+
+    public void setExpiryYear(Long expiryYear) {
+<span class="fc" id="L232">        this.expiryYear = expiryYear;</span>
+<span class="fc" id="L233">    }</span>
+
+    public Boolean getDefault() {
+<span class="fc" id="L236">        return isDefault;</span>
+    }
+
+    public void setDefault(Boolean aDefault) {
+<span class="fc" id="L240">        isDefault = aDefault;</span>
+<span class="fc" id="L241">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

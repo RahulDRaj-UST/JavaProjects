@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerTopicServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">updatecustomer</a> &gt; <a href="index.source.html" class="el_package">com.wba.api.updatecustomer.service</a> &gt; <span class="el_source">CustomerTopicServiceImpl.java</span></div><h1>CustomerTopicServiceImpl.java</h1><pre class="source lang-java linenums">package com.wba.api.updatecustomer.service;
+
+import com.wba.api.updatecustomer.constant.EapiErrorEnum;
+import com.wba.api.updatecustomer.dto.PatientDto;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
+import org.springframework.stereotype.Service;
+import org.springframework.util.concurrent.ListenableFuture;
+import org.springframework.util.concurrent.ListenableFutureCallback;
+import org.springframework.web.server.ResponseStatusException;
+
+/**
+ * @author 165571
+ * @href &lt;mohammedanas.abdulrasheed@ust.com&gt;
+ * @createdon 2/24/2021
+ */
+
+@Service
+<span class="fc" id="L24">public class CustomerTopicServiceImpl implements CustomerTopicService {</span>
+
+<span class="fc" id="L26">    private static final Logger LOGGER = LoggerFactory.getLogger(CustomerTopicServiceImpl.class);</span>
+<span class="fc" id="L27">    boolean isDataPushSuccess = true;// variable for determining kafka-push is success or not.</span>
+
+    @Value(&quot;${kafka.topic}&quot;)
+    private String topic;
+
+    @Autowired
+    private KafkaTemplate&lt;String, PatientDto&gt; kafkaTemplate;
+
+    /**
+     * Service for pushing data to kafka-topic
+     */
+    public String pushCustomerDataToTopic(PatientDto patientObj) {
+
+<span class="pc bpc" id="L40" title="2 of 6 branches missed.">        if (patientObj == null || patientObj.getPatientId() == null || patientObj.getPatientId().trim().isEmpty()) { // as per SRS 'patient ID' is mandatory info</span>
+
+<span class="fc" id="L42">            LOGGER.error(&quot; **Data validation Error** Received message not in expected format....unable to push this message to topic...&quot;);</span>
+<span class="fc" id="L43">            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, EapiErrorEnum.ERRROR400.getMessage());</span>
+        }
+
+<span class="fc" id="L46">        ListenableFuture&lt;SendResult&lt;String, PatientDto&gt;&gt; kafkafutureObj = kafkaTemplate.send(topic, patientObj.getPatientId(), patientObj); // push the 'patientObj' to the topic 'customer_topic' for further processing</span>
+
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if (kafkafutureObj != null) {</span>
+
+<span class="nc" id="L50">            kafkafutureObj.addCallback(new ListenableFutureCallback&lt;SendResult&lt;String, PatientDto&gt;&gt;() {</span>
+
+                public void onSuccess(SendResult&lt;String, PatientDto&gt; result) {
+<span class="nc" id="L53">                    isDataPushSuccess = true;</span>
+<span class="nc" id="L54">                }</span>
+
+                public void onFailure(Throwable ex) {
+<span class="nc" id="L57">                    isDataPushSuccess = false;</span>
+<span class="nc" id="L58">                }</span>
+            });
+        }
+
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if (isDataPushSuccess) {</span>
+
+//            LOGGER.info(&quot;-------- Message successfully pushed with below Info ---------------&quot;);
+//            LOGGER.info(&quot;Topic Name : {}&quot;, topic);
+//            LOGGER.info(&quot;MSG Id : {}&quot;, patientObj.getPatientId());
+//            LOGGER.info(&quot;------------------------------------------------------------&quot;);
+<span class="fc" id="L68">            return &quot;Update sent successfully&quot;;</span>
+
+        } else {
+
+//            LOGGER.info(&quot;---***** Unable to push below info to topic *****---&quot;);
+//            LOGGER.info(&quot;Topic Name : {}&quot;, topic);
+//            LOGGER.info(&quot;MSG Id : {}&quot;, patientObj.getPatientId());
+//            LOGGER.info(&quot;------------------------------------------------------------&quot;);
+
+<span class="nc" id="L77">            throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, EapiErrorEnum.ERRROR503.getMessage());</span>
+        }
+
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

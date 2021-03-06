@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PaymentDto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">updatecustomer</a> &gt; <a href="index.source.html" class="el_package">com.wba.api.updatecustomer.dto</a> &gt; <span class="el_source">PaymentDto.java</span></div><h1>PaymentDto.java</h1><pre class="source lang-java linenums">package com.wba.api.updatecustomer.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+/**
+ * @author 165571
+ * @href &lt;mohammedanas.abdulrasheed@ust.com&gt;
+ * @createdon 2/12/2021
+ */
+<span class="fc" id="L13">public class PaymentDto implements Serializable {</span>
+
+    private String cardType;
+    private String creditCard;
+    private Integer lastFourDigits;
+    private Long expiryMonth;
+    private Long expiryYear;
+    private String zipCode;
+    @JsonProperty(&quot;isDefault&quot;)
+    private boolean isDefault;
+
+    public String getCardType() {
+<span class="fc" id="L25">        return cardType;</span>
+    }
+
+    public void setCardType(String cardType) {
+<span class="fc" id="L29">        this.cardType = cardType;</span>
+<span class="fc" id="L30">    }</span>
+
+    public String getCreditCard() {
+<span class="fc" id="L33">        return creditCard;</span>
+    }
+
+    public void setCreditCard(String creditCard) {
+<span class="fc" id="L37">        this.creditCard = creditCard;</span>
+<span class="fc" id="L38">    }</span>
+
+    public Integer getLastFourDigits() {
+<span class="fc" id="L41">        return lastFourDigits;</span>
+    }
+
+    public void setLastFourDigits(Integer lastFourDigits) {
+<span class="fc" id="L45">        this.lastFourDigits = lastFourDigits;</span>
+<span class="fc" id="L46">    }</span>
+
+    public Long getExpiryMonth() {
+<span class="fc" id="L49">        return expiryMonth;</span>
+    }
+
+    public void setExpiryMonth(Long expiryMonth) {
+<span class="fc" id="L53">        this.expiryMonth = expiryMonth;</span>
+<span class="fc" id="L54">    }</span>
+
+    public Long getExpiryYear() {
+<span class="fc" id="L57">        return expiryYear;</span>
+    }
+
+    public void setExpiryYear(Long expiryYear) {
+<span class="fc" id="L61">        this.expiryYear = expiryYear;</span>
+<span class="fc" id="L62">    }</span>
+
+    public String getZipCode() {
+<span class="fc" id="L65">        return zipCode;</span>
+    }
+
+    public void setZipCode(String zipCode) {
+<span class="fc" id="L69">        this.zipCode = zipCode;</span>
+<span class="fc" id="L70">    }</span>
+
+    public boolean isDefault() {
+<span class="fc" id="L73">        return isDefault;</span>
+    }
+
+    public void setDefault(boolean aDefault) {
+<span class="fc" id="L77">        isDefault = aDefault;</span>
+<span class="fc" id="L78">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (this == o) return true;</span>
+<span class="pc bpc" id="L83" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="fc" id="L84">        PaymentDto that = (PaymentDto) o;</span>
+<span class="pc bpc" id="L85" title="7 of 14 branches missed.">        return Objects.equals(getCardType(), that.getCardType()) &amp;&amp; Objects.equals(getCreditCard(), that.getCreditCard()) &amp;&amp; Objects.equals(getLastFourDigits(), that.getLastFourDigits()) &amp;&amp; Objects.equals(getExpiryMonth(), that.getExpiryMonth()) &amp;&amp; Objects.equals(getExpiryYear(), that.getExpiryYear()) &amp;&amp; Objects.equals(getZipCode(), that.getZipCode()) &amp;&amp; Objects.equals(isDefault, that.isDefault);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
